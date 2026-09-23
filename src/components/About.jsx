@@ -2,10 +2,10 @@ import React from 'react';
 
 export default function About() {
   const stats = [
-    { icon: 'fa-solid fa-code', number: '95%', label: 'HTML5 & CSS3 Expertise' },
-    { icon: 'fa-solid fa-cubes', number: '90%', label: 'Bootstrap Responsiveness' },
-    { icon: 'fa-brands fa-js', number: '85%', label: 'JavaScript Development' },
-    { icon: 'fa-brands fa-react', number: '75%', label: 'React Framework' },
+    { icon: 'fa-solid fa-brain', number: 'AI & ML', label: 'Fellowship @ NETSOL' },
+    { icon: 'fa-solid fa-robot', number: 'Agentic', label: 'GenAI & Autonomous Systems' },
+    { icon: 'fa-brands fa-react', number: 'React UI', label: 'Modern Frontend Architecture' },
+    { icon: 'fa-brands fa-python', number: 'Python', label: 'Data Science & Modeling' },
   ];
 
   return (
@@ -20,13 +20,13 @@ export default function About() {
         <div className="grid-2 gap-4">
           <div className="about-text">
             <p className="paragraph-lead" style={{ fontSize: '1.15rem', fontWeight: 600 }}>
-              Passionate and motivated Front-End Web Developer currently pursuing a Bachelor's degree at the University of Management & Technology (UMT).
+              AI/ML Developer & Web Engineer passionate about Agentic Systems, Generative AI, and high-performance user experiences.
             </p>
             <p>
-              I specialize in creating responsive, high-performance, and user-friendly websites using HTML, CSS, JavaScript, Bootstrap, and React. I am continuously expanding my knowledge of modern web technologies and networking concepts to craft top-notch digital solutions.
+              I specialize in bridging intelligent Artificial Intelligence models—including autonomous agentic workflows and Generative AI—with clean, intuitive web interfaces. Currently selected for the intensive 3-month AI/ML training program at <strong>NETSOL Technologies Pakistan</strong> under the NAVTTC initiative, mentored by <strong>Sir Ali Raqib</strong>.
             </p>
             <p>
-              Currently seeking internship opportunities where I can apply my web development skills, gain valuable hands-on experience, and contribute to real-world software products.
+              Whether engineering goal-directed multi-agent pipelines, training predictive machine learning models in Python, or crafting responsive React web applications, I focus on transforming cutting-edge algorithms into high-value real-world software.
             </p>
 
             <div className="quick-highlights">
@@ -44,8 +44,8 @@ export default function About() {
                   <i className="fa-solid fa-graduation-cap"></i>
                 </div>
                 <div>
-                  <strong>Current University</strong>
-                  <p>UMT Lahore</p>
+                  <strong>University & Training</strong>
+                  <p>UMT & NETSOL (NAVTTC)</p>
                 </div>
               </div>
             </div>

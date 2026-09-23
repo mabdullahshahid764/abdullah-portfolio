@@ -4,9 +4,10 @@ import cvPdf from '../assets/cv.pdf';
 
 export default function Hero() {
   const titles = [
-    "Front-End Web Developer.",
-    "Computer Science Student.",
-    "Aspiring Network Engineer."
+    "AI & Machine Learning Developer.",
+    "Agentic & Generative AI Builder.",
+    "Python & Modern Web Developer.",
+    "Computer Science Student."
   ];
 
   const [titleIndex, setTitleIndex] = useState(0);
@@ -64,7 +65,7 @@ export default function Hero() {
             <span className="cursor">|</span>
           </h2>
           <p className="hero-description">
-            Building modern, responsive, dynamic, and user-friendly web experiences with clean code & state-of-the-art design systems.
+            Building intelligent AI systems, autonomous agentic workflows, and high-performance modern web experiences with clean code & cutting-edge architecture.
           </p>
           <div className="hero-cta">
             <a
@@ -74,8 +75,8 @@ export default function Hero() {
             >
               <i className="fa-solid fa-cloud-arrow-down"></i> Download CV
             </a>
-            <a href="#contact" className="btn btn-secondary">
-              <i className="fa-regular fa-envelope"></i> Contact Me
+            <a href="#activity" className="btn btn-secondary">
+              <i className="fa-solid fa-brain"></i> AI Activity
             </a>
             <a href="#projects" className="btn btn-tertiary">
               View Projects <i className="fa-solid fa-arrow-right-long"></i>
@@ -126,20 +127,20 @@ export default function Hero() {
             {/* Quick stats floating badges */}
             <div className="floating-badge badge-1">
               <div className="badge-icon">
-                <i className="fa-solid fa-laptop-code"></i>
+                <i className="fa-solid fa-robot"></i>
               </div>
               <div className="badge-info">
-                <h4>75%+</h4>
-                <p>React Skills</p>
+                <h4>Agentic & GenAI</h4>
+                <p>AI/ML Developer</p>
               </div>
             </div>
             <div className="floating-badge badge-2">
               <div className="badge-icon">
-                <i className="fa-solid fa-circle-check"></i>
+                <i className="fa-solid fa-award"></i>
               </div>
               <div className="badge-info">
-                <h4>Matric - BPS</h4>
-                <p>Education Path</p>
+                <h4>NETSOL × NAVTTC</h4>
+                <p>Selected AI Trainee</p>
               </div>
             </div>
           </div>

@@ -8,6 +8,7 @@ export default function Navbar({ darkMode, setDarkMode }) {
   const navItems = [
     { id: 'home', label: 'Home' },
     { id: 'about', label: 'About' },
+    { id: 'activity', label: 'AI Activity' },
     { id: 'education', label: 'Education' },
     { id: 'skills', label: 'Skills' },
     { id: 'qualifications', label: 'Qualifications' },

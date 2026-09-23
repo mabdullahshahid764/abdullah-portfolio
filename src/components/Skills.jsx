@@ -1,25 +1,32 @@
 import React from 'react';
 
 export default function Skills() {
+  const aiSkills = [
+    { name: 'Python Programming', level: '85%' },
+    { name: 'Agentic AI & Multi-Agent Workflows', level: '80%' },
+    { name: 'Generative AI & Prompt Engineering', level: '85%' },
+    { name: 'Machine Learning (Scikit-Learn, Pandas)', level: '80%' },
+    { name: 'LLM Integration & RAG Architecture', level: '75%' },
+  ];
+
   const frontendSkills = [
-    { name: 'HTML5', level: '95%' },
-    { name: 'CSS3', level: '95%' },
-    { name: 'Bootstrap', level: '90%' },
-    { name: 'JavaScript', level: '85%' },
-    { name: 'React', level: '75%' },
-    { name: 'Git & GitHub', level: '80%' },
+    { name: 'HTML5 & CSS3', level: '95%' },
+    { name: 'Bootstrap & Responsive UI', level: '90%' },
+    { name: 'JavaScript (ES6+)', level: '85%' },
+    { name: 'React Framework', level: '80%' },
+    { name: 'Git & GitHub', level: '85%' },
   ];
 
   const backendSkills = [
-    { name: 'PHP', level: '70%' },
+    { name: 'PHP & REST APIs', level: '75%' },
     { name: 'Database (SQL / MySQL)', level: '75%' },
   ];
 
   const softSkills = [
-    { name: 'Problem Solving', level: '90%' },
+    { name: 'Problem Solving & Logic', level: '90%' },
     { name: 'Critical Thinking', level: '85%' },
-    { name: 'Creativity', level: '90%' },
-    { name: 'Management Skills', level: '80%' },
+    { name: 'Continuous Learning', level: '95%' },
+    { name: 'Team Collaboration', level: '85%' },
   ];
 
   return (
@@ -32,6 +39,27 @@ export default function Skills() {
         </div>
 
         <div className="skills-grid">
+          {/* AI & Machine Learning Card */}
+          <div className="skills-card glassmorphism">
+            <div className="skills-card-header">
+              <i className="fa-solid fa-robot"></i>
+              <h3>AI & Machine Learning</h3>
+            </div>
+            <div className="skills-list">
+              {aiSkills.map((skill, i) => (
+                <div key={i} className="skill-item">
+                  <div className="skill-info">
+                    <span>{skill.name}</span>
+                    <span>{skill.level}</span>
+                  </div>
+                  <div className="progress-track">
+                    <div className="progress-bar" style={{ width: skill.level }}></div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
           {/* Front-End Card */}
           <div className="skills-card glassmorphism">
             <div className="skills-card-header">
@@ -78,9 +106,11 @@ export default function Skills() {
               <h3>Other Technical Skills</h3>
             </div>
             <div className="skills-tags-container">
+              <span className="skill-tag">Agentic Workflows</span>
+              <span className="skill-tag">Generative AI</span>
+              <span className="skill-tag">LangChain & LLMs</span>
+              <span className="skill-tag">FastAPI</span>
               <span className="skill-tag">Computer Networking</span>
-              <span className="skill-tag">Machine Learning (Basic)</span>
-              <span className="skill-tag">REST APIs</span>
               <span className="skill-tag">Vite & npm</span>
             </div>
           </div>
