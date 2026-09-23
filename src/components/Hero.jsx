@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import profileImg from '../assets/p.jpg';
+import cvPdf from '../assets/cv.pdf';
 
 export default function Hero() {
   const titles = [
@@ -66,7 +68,7 @@ export default function Hero() {
           </p>
           <div className="hero-cta">
             <a
-              href="assets/cv.pdf"
+              href={cvPdf}
               download="Muhammad_Abdullah_Shahid_CV.pdf"
               className="btn btn-primary"
             >
@@ -112,9 +114,13 @@ export default function Hero() {
           <div className="avatar-glass-card glassmorphism">
             <div className="avatar-border">
               <img
-                src="assets/p.jpg"
+                src={profileImg}
                 alt="Muhammad Abdullah Shahid"
                 className="avatar-image"
+                onError={(e) => {
+                  e.currentTarget.onerror = null;
+                  e.currentTarget.src = 'assets/p.jpg';
+                }}
               />
             </div>
             {/* Quick stats floating badges */}

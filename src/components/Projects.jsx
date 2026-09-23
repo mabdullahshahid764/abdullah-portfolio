@@ -1,4 +1,8 @@
 import React, { useState } from 'react';
+import project1Img from '../assets/project1.png';
+import project2Img from '../assets/project2.png';
+import project3Img from '../assets/project3.png';
+import project4Img from '../assets/project4.png';
 
 export default function Projects() {
   const [activeFilter, setActiveFilter] = useState('all');
@@ -9,7 +13,8 @@ export default function Projects() {
       category: 'frontend',
       title: 'Lost & Found System',
       meta: 'University Final Year Project',
-      image: 'assets/project1.png',
+      image: project1Img,
+      fallbackImage: 'assets/project1.png',
       desc: 'A responsive platform for university campus members to report lost items and claim found belongings with item visual tracking.',
       tags: ['HTML5', 'CSS3', 'JavaScript', 'Bootstrap'],
       demo: 'https://example.com',
@@ -20,7 +25,8 @@ export default function Projects() {
       category: 'database',
       title: 'Library Management System',
       meta: 'Database Project',
-      image: 'assets/project2.png',
+      image: project2Img,
+      fallbackImage: 'assets/project2.png',
       desc: 'A robust system handling inventory tracking, catalog search, book reservations, and fine calculations with SQL backend.',
       tags: ['PHP', 'MySQL', 'HTML/CSS', 'SQL Queries'],
       demo: 'https://example.com',
@@ -31,7 +37,8 @@ export default function Projects() {
       category: 'ai',
       title: 'AgriDrone Mapping',
       meta: 'AI + Agriculture Project',
-      image: 'assets/project3.png',
+      image: project3Img,
+      fallbackImage: 'assets/project3.png',
       desc: 'Combines computer vision algorithms and spatial data to plot healthy/dry regions in crops using drone imagery analysis.',
       tags: ['Machine Learning', 'Python', 'Flask', 'D3.js'],
       demo: 'https://example.com',
@@ -42,7 +49,8 @@ export default function Projects() {
       category: 'frontend',
       title: 'Tech Review Website',
       meta: 'Personal Project',
-      image: 'assets/project4.png',
+      image: project4Img,
+      fallbackImage: 'assets/project4.png',
       desc: 'A highly optimized review website built in React, featuring custom category filtering, smooth animations, and rating metrics.',
       tags: ['React', 'CSS Modules', 'JavaScript', 'Responsive'],
       demo: 'https://example.com',
@@ -96,7 +104,15 @@ export default function Projects() {
           {filteredProjects.map((project) => (
             <div key={project.id} className="project-card glassmorphism">
               <div className="project-img-container">
-                <img src={project.image} alt={project.title} className="project-img" />
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="project-img"
+                  onError={(e) => {
+                    e.currentTarget.onerror = null;
+                    e.currentTarget.src = project.fallbackImage;
+                  }}
+                />
                 <div className="project-overlay">
                   <div className="project-links">
                     <a href={project.github} target="_blank" rel="noreferrer" aria-label="GitHub">
